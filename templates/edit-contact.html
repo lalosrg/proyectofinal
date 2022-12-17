@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    
+    <div class="col-md-4 offset-md-4">
+        <div class="card card-body">
+            <form action="/update/{{contact.0}}" method="POST">
+        
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Nombre" value="{{contact.1}}" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="apellido" placeholder="Apellido" value="{{contact.2}}" class="form-control">
+            </div>    
+
+            <div class="form-group">
+                <input type="text" name="direccion" placeholder="Direccion" value="{{contact.3}}" class="form-control">
+            </div> 
+            
+            <div class="form-group">
+                <input type="text" name="localidad" placeholder="Localidad" value="{{contact.4}}" class="form-control">>
+            </div>    
+
+            <div class="form-group">
+                <input type="text" name="telefono" placeholder="Telefono" value="{{ contact.5 }}" class="form-control">
+            </div>   
+            
+            <div class="form-group">
+                <input type="text" name="email" placeholder="Email" value="{{contact.6}}" class="form-control">
+            </div>   
+
+            <div class="form-group" >
+                <button type="submit" class="btn btn-success btn-block">
+                    Guadar
+                </button>
+            </div>    
+            </form>  
+        </div>
+    </div>
+
+{% endblock %}    
